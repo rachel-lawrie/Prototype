@@ -23,12 +23,15 @@ export const MapView = () => {
       zoom: zoom,
     });
 
+    // Define the resize function separately
+
     map.current.on("load", () => {
       new mapboxgl.Marker({ color: "red" })
         .setLngLat([lng, lat])
         .addTo(map.current);
+      map.current.resize();
 
-      map.current.on("click", (event) => {
+      map.current.on("dblclick", (event) => {
         console.log(event);
         console.log(event.lngLat);
 
@@ -47,9 +50,5 @@ export const MapView = () => {
     });
   }, []);
 
-  return (
-    <div>
-      <div ref={mapContainer} className="map-container" />
-    </div>
-  );
+  return <div ref={mapContainer} className="map-container" />;
 };

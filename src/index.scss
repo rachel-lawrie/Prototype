@@ -6,6 +6,7 @@ $button-hover-color: #464444;
 }
 
 @import "~bootstrap/scss/bootstrap.scss";
+// @import "~react-bootstrap-sidebar-menu/dist/sidebar-menu.scss";
 
 .custom-navbar-brand {
   color: $color;
@@ -33,15 +34,6 @@ footer.footer {
   margin-top: auto;
 }
 
-.content-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  margin-right: 0 !important; /* Add this line to reset the right margin */
-  padding: 0;
-}
-
 .button-content {
   display: flex;
   flex-direction: column;
@@ -57,4 +49,15 @@ footer.footer {
 
 .button-text {
   margin-top: 30px;
+}
+
+html,
+body,
+#root,
+.main-view {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
 }
