@@ -21908,6 +21908,32 @@ textarea.form-control-lg {
   content: "";
 }
 
+nav {
+  height: 3em;
+  width: 3em;
+  background-color: #467c43;
+  border-radius: 5%;
+  margin: .5em;
+}
+
+.burger-menu {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: .4em 0;
+  display: flex;
+}
+
+.burger-bar {
+  width: 2.4em;
+  height: .4em;
+  background-color: #fff;
+  border-radius: 10%;
+}
+
 .prototype {
   color: #467c43;
 }
