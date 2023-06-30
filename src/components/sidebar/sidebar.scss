@@ -1,7 +1,7 @@
 nav {
   height: 3em;
   width: 3em;
-  background-color: rgb(70, 124, 67);
+  background-color: lightgray;
   border-radius: 5%;
   margin: 0.5em;
 }
@@ -15,11 +15,52 @@ nav {
   justify-content: space-between;
   padding: 0.4em 0;
   cursor: pointer;
+  box-shadow: 0px 4px 5px 0px darkgray;
 }
 
 .burger-bar {
   width: 2.4em;
   height: 0.4em;
-  background-color: white;
+  background-color: rgb(70, 124, 67);
   border-radius: 10%;
+}
+
+.menu {
+  height: 100vh;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+  transform: translateX(-100%);
+}
+
+.visible {
+  display: flex;
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  animation: slideIn 0.3s forwards;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  color: darkgray;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }

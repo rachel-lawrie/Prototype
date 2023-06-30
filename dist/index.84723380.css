@@ -21911,7 +21911,7 @@ textarea.form-control-lg {
 nav {
   height: 3em;
   width: 3em;
-  background-color: #467c43;
+  background-color: #d3d3d3;
   border-radius: 5%;
   margin: .5em;
 }
@@ -21925,13 +21925,55 @@ nav {
   align-items: center;
   padding: .4em 0;
   display: flex;
+  box-shadow: 0 4px 5px #a9a9a9;
 }
 
 .burger-bar {
   width: 2.4em;
   height: .4em;
-  background-color: #fff;
+  background-color: #467c43;
   border-radius: 10%;
+}
+
+.menu {
+  height: 100vh;
+  transition: transform .3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+  transform: translateX(-100%);
+}
+
+.visible {
+  z-index: 30;
+  height: 100vh;
+  animation: .3s forwards slideIn;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.close-btn {
+  cursor: pointer;
+  color: #a9a9a9;
+  background: none;
+  border: none;
+  font-size: 1em;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .prototype {
